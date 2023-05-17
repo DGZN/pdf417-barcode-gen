@@ -1,0 +1,24 @@
+{
+  "name": "pdf417-barcode-gen",
+  "version": "1.0.0",
+  "description": "An excellent tool to create AAMVA 2017 PDF417 barcodes.\r - javascript\r - chosen.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cross-env DEBUG=PDF417-BARCODE-GEN:tests:* mocha test/*",
+    "testdev": "npx nodemon -w src/ -w test/ --exec npx cross-env DEBUG=PDF417-BARCODE-GEN:tests:* mocha test/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "chai-integer": "^0.1.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.4",
+    "sinon-chai": "^3.7.0"
+  }
+}
