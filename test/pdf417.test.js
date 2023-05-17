@@ -20,7 +20,7 @@ beforeEach(async () => {
 describe('getRndInteger(', async () => {
 
     it('Should return a random integer', async () => {
-      getRndInteger().should.be.an.integer()
+      getRndInteger(2,5).should.be.an.integer()
     })
     
 })
