@@ -1,32 +1,28 @@
-const { inspect } = require('util')
+const { inspect } = require("util");
 
-let chai = require('chai')
-, expect = chai.expect
-, should = chai.should()
-, sinon = require('sinon')
-, chaiAsPromised = require("chai-as-promised")
-, debug = require("debug")("PDF417-BARCODE-GEN:tests:debug")
+let chai = require("chai"),
+  expect = chai.expect,
+  should = chai.should(),
+  sinon = require("sinon"),
+  chaiAsPromised = require("chai-as-promised"),
+  debug = require("debug")("PDF417-BARCODE-GEN:tests:debug");
 
-chai.use( require('chai-integer') )
+chai.use(require("chai-integer"));
 
-let {getRndInteger} = require('../src/util.js')
+let { getRndInteger, getRndLetter } = require("../src/util.js");
+const { type } = require("os");
 
-describe('PDF417.js', async () => {
+describe("Utility Functions", async () => {
+  beforeEach(async () => {});
 
-beforeEach(async () => {
+  it("Should return a random integer", async () => {
+    getRndInteger(2, 5).should.be.an.integer();
+  });
 
-})
+  it("Should return a random letter", async () => {
+    let letter = getRndLetter();
+    letter.should.be.a("string");
+  });
 
-describe('getRndInteger(', async () => {
-
-    it('Should return a random integer', async () => {
-      getRndInteger(2,5).should.be.an.integer()
-    })
-    
-})
-
-afterEach(async () => {
-
-})
-
-})
+  afterEach(async () => {});
+});
